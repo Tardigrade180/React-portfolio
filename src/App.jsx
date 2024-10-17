@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header'
-import Layout from './components/Layout'
+import Layout from './assets/layouts/Layout'
 import { Circle } from 'lucide-react';
 import { Link } from 'lucide-react';
 import { Smile } from 'lucide-react';
