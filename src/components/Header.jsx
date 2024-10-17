@@ -85,7 +85,7 @@ const Header = () => {
                 </a>
               </li>
             </ol>
-            <a href="/public/Resume.pdf" className={`px-4 py-2 border border-black ${hoverWhite} hover:bg-black hover:bg-opacity-10 rounded text-center`}>
+            <a href="/Resume.pdf" className={`px-4 py-2 border border-black ${hoverWhite} hover:bg-black hover:bg-opacity-10 rounded text-center`}>
               Resume
             </a>
           </nav>
