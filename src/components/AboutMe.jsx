@@ -1,5 +1,7 @@
 import React from "react";
 import { Circle, Code, Terminal, Codepen } from "lucide-react";
+// Import the image file directly
+import headshot from "../assets/img/headshot.jpg";
 
 const AboutMe = () => {
   return (
@@ -34,7 +36,7 @@ const AboutMe = () => {
             {/* Image Container with extended size */}
             <div className="relative z-10 overflow-hidden rounded-lg h-full md:h-[450px]">
               <img
-                src="../src/assets/img/headshot.jpg"
+                src={headshot}
                 alt="Abdallah"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
