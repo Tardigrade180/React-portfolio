@@ -3,14 +3,26 @@ import { Link, Github, ExternalLink } from 'lucide-react';
 
 const PortfolioProjects = () => {
   const projects = [
+
+
     {
-      title: "25 Farm Website",
-      description: "A modern website for agricultural business featuring responsive design and interactive elements.",
-      image: "../src/assets/img/25farmsscreenshot.png",
-      liveLink: "https://tardigrade180.github.io/farm-site/",
-      githubLink: "https://github.com/Tardigrade180/farm-site",
-      tech: ["React", "Tailwind CSS", "JavaScript"]
+      title: "E-commerce Platform",
+      description: "Modern e-commerce solution with real-time inventory management, secure payment processing, and responsive design.",
+      image: "../src/assets/img/artisam.jpg", // Add your screenshot path
+      liveLink: "https://service-hub-pro.netlify.app/",
+      githubLink: "https://github.com/username/ecommerce-project",
+      tech: ["Next.js", "Stripe", "Prisma", "PostgreSQL"]
     },
+ 
+    {
+      title: "Task Management App",
+      description: "Collaborative task management tool with real-time updates, task assignments, and progress tracking features.",
+      image: "../src/assets/img/todoapp.jpg", // Add your screenshot path
+      liveLink: "https://todoapp-100.netlify.app/",
+      githubLink: "https://github.com/username/task-manager",
+      tech: ["Vue.js", "Firebase", "Vuex", "TailwindCSS"]
+    },
+
     {
       title: "Ocean Guard Project",
       description: "Environmental monitoring platform focused on ocean conservation and data visualization.",
@@ -18,7 +30,26 @@ const PortfolioProjects = () => {
       liveLink: "https://tardigrade180.github.io/Anything/",
       githubLink: "https://github.com/Tardigrade180/Anything",
       tech: ["React", "Node.js", "Express"]
-    }
+    },
+
+    {
+      title: "Advertisement-Web-App",
+      description: "AI-powered digital advertising platform with real-time campaign optimization, audience targeting, and performance analytics.",
+      image: "../src/assets/img/adcraft-screenshot.png",
+      liveLink: "https://adcraft-pro.com",
+      githubLink: "https://github.com/Rundiva/Advertisement-Web-App",
+      tech: ["React", "Machine Learning", "Google Ads API", "ChartJS"]
+    },
+
+    {
+      title: "Library Management System",
+      description: "A full-stack library management application built with React and Node.js. Features include user authentication, book tracking, and automated notifications.",
+      image: "../src/assets/img/library-project-screenshot.png", // Add your screenshot path
+      liveLink: "https://library-project.com",
+      githubLink: "https://github.com/Rundiva/library-app",
+      tech: ["React", "Node.js", "MongoDB", "Express"]
+    },
+    
   ];
 
   return (
@@ -30,7 +61,7 @@ const PortfolioProjects = () => {
         {/* Section Header */}
         <header className="mb-16 space-y-2">
           <div className="flex items-center space-x-4">
-            <span className="text-sm font-mono text-white/60">03.</span>
+            <span className="text-sm font-mono text-white/60">04.</span>
             <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
           </div>
           <div className="w-16 h-px bg-white/20" />
