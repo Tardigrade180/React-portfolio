@@ -31,7 +31,7 @@ const Header = () => {
           {/* Logo & Branding */}
           <div className="flex items-center space-x-4">
             <img
-              src="/src/assets/img/logo.jpg" // Ensure the image is in the public folder
+              src="/logo.jpg" // Ensure the image is in the public folder
               alt="Logo"
               className="h-8 w-8 rounded-full object-cover hover:scale-105 transition-all duration-300"
             />
@@ -70,10 +70,11 @@ const Header = () => {
               ))}
             </ol>
             <a
-              href="/src/assets/img/Resumeupdate.pdf"
+              href="/Resume.pdf"
               className="px-4 py-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 transition-all duration-300 rounded text-sm"
             >
               Resume
+              
             </a>
           </nav>
 
