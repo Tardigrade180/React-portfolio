@@ -96,5 +96,36 @@ body {
   }
 }
 
+@keyframes orbit {
+  0%   { transform: rotate(0deg) translateX(110%) rotate(0deg); }
+  25%  { transform: rotate(90deg) translateX(110%) rotate(-90deg); }
+  50%  { transform: rotate(180deg) translateX(110%) rotate(-180deg); }
+  75%  { transform: rotate(270deg) translateX(110%) rotate(-270deg); }
+  100% { transform: rotate(360deg) translateX(110%) rotate(-360deg); }
+}
+
+
+.glow-border {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  min-width: 300px; /* Ensure a decent size */
+}
+
+
+.orbiting-rocket {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 1.5rem;
+  animation: orbit 6s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 100, 100, 0.8));
+  transform-origin: center;
+}
+
+
+
 
 
