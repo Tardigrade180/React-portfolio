@@ -1,106 +1,84 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import { Smile } from "lucide-react";
+import React from "react";
+import { Mail, MessageCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID", // your service ID
-        "YOUR_TEMPLATE_ID", // your template ID
-        formData,
-        "YOUR_USER_ID" // your user ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send message. Please try again.");
-        }
-      );
-  };
-
   return (
-    <div className="py-12 bg-black text-white">
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl font-bold">
-          <span className="text-white"></span> CONTACT
-        </h1>
-        <hr className="border-t-2 border-white/20 my-4 w-1/4 mx-auto" />
-        <h5 className="text-xl text-white/70">
-          Looking forward to connecting{" "}
-          <Smile className="ml-2 inline-block" size={30} />
-        </h5>
-        <ContactForm
-          formData={formData}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-      </div>
-    </div>
-  );
-};
+    <div className="flex flex-col items-center justify-center h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 bg-gradient-radial from-gray-900 via-black to-gray-900 animate-pulse opacity-50"></div>
 
-const ContactForm = ({ formData, handleChange, handleSubmit }) => {
-  return (
-    <div className="mt-8">
-      <div className="form w-full max-w-lg mx-auto p-6 bg-black text-white shadow-md rounded-lg border-4 border-white/20">
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-white/30 rounded-md text-black"
+      {/* Title: Get in Touch */}
+      <motion.h1
+        className="text-6xl font-extrabold mt-20 mb-10 text-white"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Get in Touch
+      </motion.h1>
+
+      {/* Funny African-Inspired Welcome Message */}
+      <motion.p
+        className="text-lg mb-12 text-gray-300 text-center max-w-xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+      >
+        Hey there! 👋 Feel free to message me. I promise I won’t ignore you...
+        unless you start with **‘I hope this message finds you well’**—because, my friend,
+        in Africa, we all know **life is finding us anyhow!** 🤣
+      </motion.p>
+
+      <div className="flex gap-32 mt-8 relative z-10">
+        {/* Gmail */}
+        <motion.a
+          href="mailto:abdallahhussein595@gmail.com?subject=Hello&body=I%20hope%20this%20message%20finds%20you%20well...%20(just%20kidding!%20😂)%20"
+          className="group flex flex-col items-center justify-center w-64 h-64 bg-white text-black rounded-full shadow-lg relative"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          whileHover={{ scale: 1.2, rotate: 5 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div
+            className="absolute inset-0 rounded-full bg-red-500 opacity-0 group-hover:opacity-30 transition-all duration-300 blur-xl"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-white/30 rounded-md text-black"
+          <Mail
+            size={110}
+            className="group-hover:text-red-500 transition-colors duration-300"
           />
-          <input
-            type="text"
-            name="phone"
-            placeholder="Your Phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-white/30 rounded-md text-black"
+          <span className="mt-4 text-3xl font-semibold group-hover:text-red-500">
+            Gmail
+          </span>
+        </motion.a>
+
+
+        {/* WhatsApp */}
+        <motion.a
+          href="https://wa.me/0541054858"
+          className="group flex flex-col items-center justify-center w-64 h-64 bg-white text-black rounded-full shadow-lg relative"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          whileHover={{ scale: 1.2, rotate: -5 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div
+            className="absolute inset-0 rounded-full bg-green-500 opacity-0 group-hover:opacity-30 transition-all duration-300 blur-xl"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full h-32 px-4 py-3 border border-white/30 rounded-md text-black"
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full px-4 py-3 bg-white text-black rounded-md hover:bg-gray-100 transition-all duration-300"
-          >
-            Send Message
-          </button>
-        </form>
+          <MessageCircle
+            size={110}
+            className="group-hover:text-green-500 transition-colors duration-300"
+          />
+          <span className="mt-4 text-3xl font-semibold group-hover:text-green-500">
+            WhatsApp
+          </span>
+        </motion.a>
       </div>
     </div>
   );
