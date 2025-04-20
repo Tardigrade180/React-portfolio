@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ArrowUpRight, Folder } from 'lucide-react';
 
-import ecommercePlatformImage from '../assets/img/artisam.jpg';
+import ecommercePlatformImage from '../assets/img/update-service-hub.jpg';
 import taskManagementImage from '../assets/img/todoapp.jpg';
 import adCraftImage from '../assets/img/adspic.jpg';
 import libraryManagementImage from '../assets/img/livrarypic.jpg';
@@ -14,7 +14,7 @@ const projects = [
     image: ecommercePlatformImage,
     liveLink: "https://service-hub-pro.netlify.app/",
     githubLink: "https://github.com/username/ecommerce-project",
-    tech: ["Next.js", "Stripe", "Prisma", "PostgreSQL"]
+    tech: ["React.js", "TailwindCSS", "Framer-Motion", "Axios"]
   },
   {
     title: "Task Management App",
@@ -22,7 +22,7 @@ const projects = [
     image: taskManagementImage,
     liveLink: "https://todoapp-100.netlify.app/",
     githubLink: "https://github.com/username/task-manager",
-    tech: ["Vue.js", "Firebase", "Vuex", "TailwindCSS"]
+    tech: ["React", "Firebase", "Vuex", "TailwindCSS"]
   },
   {
     title: "Advertisement Web App",

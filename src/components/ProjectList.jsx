@@ -15,7 +15,7 @@ const ProjectList = () => {
       description: 'Modern e-commerce solution with real-time inventory management, secure payment processing, and responsive design.',
       link: 'https://ecommerce-project.com',
       github: 'https://github.com/tardigrade180/ecommerce-project',
-      technologies: ['Next.js', 'Stripe', 'Prisma', 'PostgreSQL']
+      technologies: ['React.js', 'Node.js', 'Prisma', 'PostgreSQL']
     },
     {
       title: 'Task Management App',
