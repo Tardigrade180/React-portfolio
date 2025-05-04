@@ -1,8 +1,15 @@
-# React + Vite
+⚡ React Portfolio (Vite-powered)
+A sleek, animated portfolio built with React, Vite, HTML, CSS, and JavaScript. Fast, responsive, and loaded with personality.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tech Stack
+React + Vite (HMR FTW)
+Vanilla HTML/CSS
+JavaScript animations (GSAP / CSS)
+ESLint for clean code
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💡 Features
+Responsive design
+Smooth animations
+Project gallery
+Contact form
+Dark mode support
